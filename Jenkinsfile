@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('🛠️ Construir') {
             steps {
-                echo 'Fase 1: Descargando código de GitHub...'
+                echo 'El codigo ha cambiado'
             }
         }
         stage('🧪 Probar') {
