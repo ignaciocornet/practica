@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('🛠️ Construir') {
             steps {
-                echo 'El codigo ha cambiado'
+                echo 'El codigo ha cambiado 2'
             }
         }
         stage('🧪 Probar') {
