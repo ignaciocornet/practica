@@ -1,14 +1,19 @@
 pipeline {
     agent any
+
     stages {
-        stage('🛠️ Construir') {
+        stage('📥 Descargar Codigo') {
             steps {
-                echo 'El codigo ha cambiado 2'
+                echo 'Obteniendo los archivos desde GitHub...'
+                checkout scm
             }
         }
-        stage('🧪 Probar') {
+        
+        stage('🛠️ Construir Imagen Docker') {
             steps {
-                echo 'Fase 2: Ejecutando pruebas mágicas...'
+                echo 'Fabricando la caja de la aplicacion...'
+                // Aqui ocurre la magia: Jenkins usa el Docker de tu WSL
+                sh 'docker build -t mi-app-web-automatizada:v1 .'
             }
         }
     }
